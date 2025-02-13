@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myETHOSphere Mobile View</title>
+  <link rel="icon" href="logo2.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="mobile-header">
+    <div class="logo-container">
+      <img src="logo.png" alt="ETHOS Logo" class="logo">
+    </div>
+    <nav class="mobile-nav">
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="welcome.html" class="nav-link">Welcome</a></li>
+        <li><a href="upload.html" class="nav-link">Upload</a></li>
+        <li><a href="FinalizeDocument.html">Finalize</a></li>
+
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="sign-in.html" class="nav-link">Sign In</a></li>
+        <li><a href="sign-up.html" class="nav-link">Sign Up</a></li>
+        <li><a href="partnerportal.html" class="nav-link">Partner</a></li>
+        <li><a href="paymentportal.html" class="nav-link">Payment</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="MobileVersion.html">Mobile</a></li>
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="mobile-main">
+    <section class="hero-section">
+      <h1>Welcome to myETHOSphere</h1>
+      <p>Transforming contracts into clarity, confidence, and control. Explore the tools and features that revolutionize contract management.</p>
+    </section>
+
+    <section class="features-section">
+      <h2>Core Features</h2>
+      <ul class="feature-list">
+        <li>Simplified Contract Translation</li>
+        <li>Audible AI Concierge</li>
+        <li>Revolutionary Cloud Protection</li>
+        <li>Customizable Outputs</li>
+        <li>Market Insights</li>
+      </ul>
+    </section>
+
+    <section class="cta-section">
+      <h2>Get Started Today</h2>
+      <a href="sign-up.html" class="cta-btn">Sign Up Now</a>
+    </section>
+  </main>
+<style>body {
+  background: linear-gradient(145deg, #007bff, #00d4ff);
+  background-size: 200% 200%;
+ }
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>
+  <script src="scripts.js"></script>
+</body>
+</html>
+<style>/* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    /* Body Styling */
+    body {
+      background: linear-gradient(135deg, #0056b3, #007bff);
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px;
+    }
+    
+    /* Header Styling */
+    .mobile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .logo {
+      height: 50px;
+    }
+    
+    .mobile-nav {
+      position: relative;
+    }
+    
+    .menu-toggle {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+    
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: rgba(0, 0, 0, 0.8);
+      list-style: none;
+      padding: 10px;
+      border-radius: 10px;
+      display: none;
+      flex-direction: column;
+    }
+    
+    .nav-links.show {
+      display: flex;
+    }
+    
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+    
+    /* Main Content Styling */
+    .mobile-main {
+      flex: 1;
+      padding: 20px 10px;
+    }
+    
+    .hero-section {
+      margin-bottom: 30px;
+    }
+    
+    .hero-section h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+      text-shadow: 0 3px 8px rgba(0, 123, 255, 0.7);
+    }
+    
+    .hero-section p {
+      font-size: 1.2rem;
+      color: #e0e0e0;
+    }
+    
+    .features-section {
+      margin-bottom: 30px;
+    }
+    
+    .features-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    
+    .feature-list {
+      list-style: none;
+      color: #e0e0e0;
+      text-align: left;
+      padding-left: 20px;
+    }
+    
+    .feature-list li {
+      margin-bottom: 10px;
+    }
+    
+    .cta-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .cta-btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #ffffff;
+      text-decoration: none;
+      background: linear-gradient(120deg, #007bff, #0056b3);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-btn:hover {
+      background: linear-gradient(120deg, #0056b3, #003d99);
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
+    }
+    
+    /* Footer Styling */
+    .mobile-footer {
+      background: rgba(255, 255, 255, 0.1);
+      text-align: center;
+      padding: 10px;
+      margin-top: auto;
+      color: #e0e0e0;
+      font-size: 0.9rem;
+    }
+    
+    /* Responsive Design */
+    @media screen and (min-width: 768px) {
+      .mobile-main {
+        padding: 30px 20px;
+      }
+    
+      .hero-section h1 {
+        font-size: 2.5rem;
+      }
+    
+      .cta-btn {
+        font-size: 1.2rem;
+      }
+    }
+    </style>
+    
