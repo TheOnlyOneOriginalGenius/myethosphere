@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome To The Ethosphere Finalize Document Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo2.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+
+
+
+  <!-- Add custom styles for moving buttons -->
+  <style>
+    .header-buttons {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      gap: 10px;
+    }
+  </style>
+
+      
+  </header>
+
+ 
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<head>
+  <link rel="apple-touch-icon" href="logo.png">
+</head>
+<html lang="en">
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalize Document - MyETHOSphere</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="logo.png" sizes="76x76" href="./logo.png/img/logo.png">
+  <link rel="logo.png" type="image/png" href="./logo.png/img/logo.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+<body>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="WelcomePage.html">Welcome</a></li>
+      <li><a href="Sign-In.html">Sign In</a></li>
+      <li><a href="Sign-Up.html">Sign Up</a></li>
+      <li><a href="AboutPage.html">About </a></li>
+      <li><a href="Upload.html">Upload</a></li>
+      <li><a href="FinalizeDocument.html">Finalize</a></li>
+      <li><a href="PartnerPortal.html">Partner </a></li>
+      <li><a href="PaymentPortal.html">Payment</a></li>
+      <li><a href="MobileVersion.html">Mobile</a></li>
+      <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="hero-section">
+      <h1>Eliminating the Complexity, Enabling Confidence</h1>
+    </div>
+
+    <div class="finalize-container">
+      <h1>Finalize Your Contract</h1>
+      <div class="contract-preview">
+        <h2>Contract Preview</h2>
+        <p id="simplified-text"></p>
+      </div>
+
+      <div class="actions">
+        <button id="print-preview-btn">Print Preview</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    
+    window.addEventListener("DOMContentLoaded", async () => {
+      const contractId = sessionStorage.getItem("contractId");
+      if (!contractId) {
+        alert("Contract converting. Please wait...");
+        return;
+      }
+
+      try {
+        const response = await fetch(`http://localhost:3000/uploads/SharkTank-Short-Application-v2.pdf`);
+        if (!response.ok) throw new (" Fetching Contract Data");
+         const { filePath } = await response.json();
+                sessionStorage.setItem("file=http://localhost:3000/uploads/SharkTank-Short-Application-v2.pdf", filePath); // Save contract PDF URL
+
+
+        const { simplifiedText } = await response.json();
+        document.getElementById("simplified-text").textContent = simplifiedText;
+      } catch (error) {
+        alert("loading contract: " + message);
+      }
+    });
+
+    document.getElementById("print-preview-btn").addEventListener("click", () => {
+      window.print();
+      
+    });
+    
+  </script>
+  
+</body>
+</html>
+</html>
+
+
+ 
+    <script src="scripts.js"></script>
+  </body>
+  </html>
+<style>/* General Body Styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #001f3f, #007bff);
+    color: white;
+    margin: 100;
+    padding: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Finalize Container */
+  .finalize-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 1300px;
+    width: 500%;
+    background: #0056b3(255, 255, 255, 0.9);
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Document Box */
+  .document-box {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    color: black;
+    border-radius: 300px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-height: 400px;
+    overflow-y: auto;
+    
+  }
+  
+  .document-box h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #0056b3;
+    text-align: center;
+  }
+  
+  /* Actions Section */
+  .actions {
+    margin-top: 20px;
+  }
+  
+  .action-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  .action-btn:hover {
+    background: linear-gradient(135deg, #00d4ff, #007bff);
+    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6);
+    transform: translateY(-3px);
+  }
+  
+  .action-btn:active {
+    background: linear-gradient(135deg, #0056b3, #003d99);
+    transform: translateY(2px);
+  }
+  </style>  
+ 
+
+  <script src="scripts.js"></script>
+</body>
+</html></html></html></html></html>
+<style>/* General Reset *//* General Navigation Styling */
+  nav {
+    background: linear-gradient(120deg, #0056b3);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-list li {
+    margin: 0 10px;
+  }
+  
+  .nav-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-list a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  /* Body Styling */
+  body {
+    background: linear-gradient(120deg, #0056b3, #007bff);
+    background-size: 300% 300%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  
+  /* Keyframes for Background Animation */
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Header Styling */
+  header {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }  
+  .logo {
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  .header-buttons .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }  
+  .header-buttons .btn:hover {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.6);
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero-section h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 0 5px 15px rgba(0, 123, 255, 0.8);
+  }
+  
+  .hero-section p {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    margin-top: 10px;
+  }
+  
+  /* Features Section */
+  #features {
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+  
+  /* Feature Box Styling */
+  .feature-box {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }  
+  .feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .feature-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 4px 8px rgba(0, 123, 255, 0.8);
+  }
+  
+  textarea,
+  input[type="text"],
+  input[type="file"],
+  select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  textarea::placeholder,
+  input::placeholder {
+    color: #bbb;
+  }
+  
+  textarea:focus,
+  input:focus,
+  select:focus {
+    outline: none;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.6);
+  }
+  
+  /* Buttons */
+  .blue-btn {
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 1rem;
+    background: linear-gradient(120deg, #0056b3, #007bff);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .blue-btn:hover {
+    background: linear-gradient(120deg, #007bff, #0056b3);
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.6);
+    transform: translateY(-5px);
+  }
+  
+  /* Footer */
+  footer {
+
+    background: rgba(0, 86, 180, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 20px 10px;
+    color: #e0e0e0;
+    margin-top: auto;
+  }  
+  .footer-container .logo-footer {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  </style>
+ 
+     
+</section>
+</main>
+<!-- Main Content -->
+<main>
+<div class="welcome-container">
+  <h1>The ETHOS Solution
+  </h1>
+  <p>
+    
+ETHOS isn’t just a product—it’s a revolution. Backed by cutting-edge AI, a scalable model, and a mission to democratize contract clarity, ETHOS is set to transform how professionals worldwide manage their legal agreements. 
+  </p>
+  <p>
+    <strong>Our Vision:</strong> To redefine contract management by providing clarity without compromise. 
+    <strong>ETHOS</strong> turns daunting legal language into actionable insights, saving you time, minimizing risks, 
+    and empowering you to negotiate with unshakable confidence.
+  </p>
+  <p>
+At the heart of ETHOS is a groundbreaking cloud service, the ETHOSphere, built to handle your unique needs with precision, speed, and security.
+    The ETHOSphere ensures seamless connectivity, enabling ETHOS to:
+    Store, analyze, and retrieve critical data instantly.
+    Learn your preferences, habits, and priorities.
+    Work across devices with unparalleled speed and accuracy.
+    
+     Safety First: With state-of-the-art encryption, the ETHOSphere guarantees that your data is private and protected at every step.
+    
+    
+  </p>
+</div>
+</main>
+
+<style>/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+  background: linear-gradient(135deg, #0056b3, #007bff);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styling */
+header {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+.logo {
+  height: 50px;
+}
+
+.header-buttons a {
+  margin-left: 15px;
+}
+
+.blue-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(120deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blue-btn:hover {
+  background: linear-gradient(120deg, #0056b3, #003d99);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Welcome Container Styling */
+.welcome-container {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.welcome-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 4px 10px rgba(0, 123, 255, 0.7);
+  text-align: center;
+}
+
+.welcome-container p {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.welcome-container p strong {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.welcome-container p em {
+  color: #ffdd57; /* Highlight key points with gold color */
+  font-style: italic;
+}
+
+/* Footer Styling */
+footer {
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-footer {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+</style>
+   <button id="backToTop" class="button" style="position: fixed; bottom: 20px; right: 20px; display: none;">Top</button>
+
+<script>
+    window.onscroll = function() {
+    };
+
+    document.getElementById("backToTop").onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    
+</script>
+<iframe id="pdfViewer" width="100%" height="600px" title="PDF Document Viewer"></iframe>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const filePath = sessionStorage.getItem("uploadedFile");
+    if (!filePath) {
+      alert("No file found. Please upload again.");
+      return;
+    }
+
+    document.getElementById("pdfViewer").src = "http://localhost:3000" + filePath;
+  });
+
+  document.getElementById("print-preview-btn").addEventListener("click", () => {
+    const filePath = sessionStorage.getItem("uploadedFile");
+    if (!filePath) {
+      alert("No contract loaded for print preview.");
+      return;
+    }
+    window.open("http://localhost:3000" + filePath, "_blank");
+  });
+</script>
+
+<style>body {
+  background: linear-gradient(145deg, #007bff, #00d4ff);
+  background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>   
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <img src="logo.png" alt="ETHOS Logo" class="logo-footer">
+    <p>© 2025 I.E.M. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html></html></html></html></html>
+<style>/* General Reset *//* General Navigation Styling */
+nav {
+  background: linear-gradient(120deg, #0056b3);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 0 10px;
+}
+
+.nav-list a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-list a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+  background: linear-gradient(120deg, #0056b3, #007bff);
+  background-size: 300% 300%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Keyframes for Background Animation */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Header Styling */
+header {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}  
+.logo {
+  height: 60px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.header-buttons .btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}  
+.header-buttons .btn:hover {
+  background-color: #007bff;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.6);
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 0 5px 15px rgba(0, 123, 255, 0.8);
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  margin-top: 10px;
+}
+
+/* Features Section */
+#features {
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Feature Box Styling */
+.feature-box {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}  
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.feature-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 4px 8px rgba(0, 123, 255, 0.8);
+}
+
+textarea,
+input[type="text"],
+input[type="file"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: #bbb;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.6);
+}
+
+/* Buttons */
+.blue-btn {
+  padding: 12px 20px;
+  color: #fff;
+  font-size: 1rem;
+  background: linear-gradient(120deg, #0056b3, #007bff);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.blue-btn:hover {
+  background: linear-gradient(120deg, #007bff, #0056b3);
+  box-shadow: 0 8px 15px rgba(0, 123, 255, 0.6);
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+
+  background: rgba(0, 86, 180, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 20px 10px;
+  color: #e0e0e0;
+  margin-top: auto;
+}  
+.footer-container .logo-footer {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
