@@ -1,0 +1,57 @@
+{
+  "start": "node server.js",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bull": "^4.16.5",
+    "ci": "^2.3.0",
+    "circle": "^1.0.0",
+    "compression": "^1.7.5",
+    "cra-template": "1.2.0",
+    "dotenv-safe": "^9.1.0",
+    "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^7.5.0",
+    "flutter": "^0.0.5",
+    "helmet": "^8.0.0",
+    "iconic": "^0.2.21",
+    "joi": "^17.13.3",
+    "morgan": "^1.10.0",
+    "nod": "^0.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scripts": "5.0.1",
+    "redis": "^4.7.0",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
+  }
+}
