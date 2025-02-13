@@ -1,0 +1,72 @@
+name: Node.js CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    - run: npm install
+    - run: npm test
+    - run: npm run build
+    - name: Deploy to AWS
+      run: ./deploy.sh
+
+3. **Deploy the Combined App**:
+Follow the backend deployment steps above for Render, Heroku, or other platforms.
+
+---
+
+### **Step 4: Configure Frontend to Use Backend API**
+
+If your frontend and backend are deployed on different domains:
+
+1. **Update API Calls**:
+Replace `/api/` with the full backend URL in your `scripts.js`:
+```javascript
+const BACKEND_URL = "https://myethosphere-backend.onrender.com";
+
+// Example API call
+const response = await fetch(`${BACKEND_URL}/api/dictionary/example`);
+name: Node.js CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    - run: npm install
+    - run: npm test
+name: Node.js CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    - run: npm install
+    - run: npm test
+    - run: npm run build
+    - name: Deploy to AWS
+      run: ./deploy.sh
